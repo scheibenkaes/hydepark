@@ -9,9 +9,7 @@
   (swap! *presentation* update-in [:slides] conj slide))
 
 (defprotocol PresentationBackend
-  (slide-attributes [this] "")
-  (render [this slides])
-  (render-slide [this slide]))
+  (render [this presentation]))
 
 (defn defpresentation
   [& info]
